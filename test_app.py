@@ -18,3 +18,9 @@ def test_add_negative():
     client = app.test_client()
     response = client.get("/add/-5/10")
     assert response.get_json()["result"] == 5
+
+
+def test_add_negative_not_found():
+    client = app.test_client()
+    response = client.get("/add/-5/10")
+    assert response.status_code == 404
