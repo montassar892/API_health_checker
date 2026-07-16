@@ -8,10 +8,12 @@ def test_health():
     assert response.get_json()["status"] == "ok"
 
 
+
 def test_add():
     client = app.test_client()
     response = client.get("/add/2/3")
     assert response.get_json()["result"] == 5
+
 
 
 def test_add_negative():
