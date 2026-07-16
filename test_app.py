@@ -18,4 +18,3 @@ def test_add_negative():
     client = app.test_client()
     response = client.get("/add/-5/10")
     assert response.get_json()["result"] == 5
-
