@@ -3,6 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
+
 @app.route("/health")
 def health():
     return jsonify({
@@ -10,9 +11,12 @@ def health():
         "time": datetime.datetime.utcnow().isoformat()
     })
 
+
 @app.route("/add/<int:a>/<int:b>")
 def add(a, b):
     return jsonify({"result": a + b})
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+    
