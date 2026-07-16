@@ -49,12 +49,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Image
-        uses: docker/build-push-actions@v5
+      - name: Build and push image
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/api-health-checker: latest   
+          tags: ${{ secrets.DOCKER_USERNAME }}/api-health-checker:latest  
          
 
 
