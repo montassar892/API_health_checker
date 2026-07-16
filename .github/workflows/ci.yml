@@ -35,7 +35,6 @@ jobs:
           name: coverage-report-py-${{ matrix.python-version }}
           path: coverage.xml
   
-  
   build-and-push:
     needs: lint-and-test
     runs-on: ubuntu-latest
